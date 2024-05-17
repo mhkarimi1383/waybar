@@ -16,4 +16,5 @@ git clone https://github.com/mhkarimi1383/waybar ~/.config/waybar
 ```
 
 **NOTE**: change wittr.sh file and replace Qom with your citty
+
 **NOTE**: change config.jsonc file and replace gaming-keyboard and change it to your keyboard device name ecording to `hyprctl devices` result and change language labels as needed
