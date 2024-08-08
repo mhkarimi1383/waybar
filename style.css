@@ -1,84 +1,108 @@
-@import url("./colors.css");
+@import url("./catppuccin/themes/mocha.css");
 
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "ComicShannsMono Nerd Font Mono";
-    min-height: 0;
+  font-family: "ComicShannsMono Nerd Font Mono";
+  font-size: 17px;
+  min-height: 0;
 }
 
-window#waybar {
-    opacity: 0.75;
-    background: @background-darker;
-    color: @foreground;
-    border-radius: 0.5em;
-    border: 0.5px solid @selection;
+#waybar {
+  background: transparent;
+  color: @text;
+  margin: 5px 5px;
 }
 
 #workspaces {
-    background: @background;
-    border: 0.5px solid @selection;
-    border-radius: 0.5em;
-    padding: 0;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left: 1rem;
 }
 
 #workspaces button {
-    padding: 0 0.05em;
-    background: @surface0;
-    color: @foreground;
-    font-size: 1.25em;
-    border-radius: 50%;
-}
-
-#workspaces button.visible {
-    color: @blue;
-}
-
-#workspaces button.empty {
-    color: @overlay0;
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
 }
 
 #workspaces button.active {
-    color: @purple;
+  color: @sky;
+  border-radius: 1rem;
 }
 
-#workspaces button.urgent {
-    background: @red;
-    color: @foreground;
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
 }
 
-#taskbar button.active {
-    background: @selection;
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#language,
+#custom-power {
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
 }
 
 #clock {
-    padding: 0 8px 0 0;
+  color: @blue;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
 }
 
-#pulseaudio-slider trough, #backlight-slider trough {
-    min-height: 10px;
-    min-width: 80px;
+#battery {
+  color: @green;
 }
 
-#window {
-    background: @overlay0;
-    padding: 0 0;
-    font-weight: bold;
+#battery.charging {
+  color: @green;
 }
 
-#custom-arch-logo {
-    color: @cyan;
-    font-size: 2em;
-    padding: 0 0 0 8px;
-    margin: 0;
+#battery.warning:not(.charging) {
+  color: @red;
 }
 
-#battery.critical {
-    color: @red;
+#backlight {
+  color: @yellow;
 }
 
-#battery.warning {
-    color: @orange;
+#backlight,
+#battery {
+  border-radius: 0;
+}
+
+#pulseaudio {
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
+}
+
+#language {
+  border-radius: 1rem 0px 0px 1rem;
+  color: @lavender;
+}
+
+#custom-power {
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @red;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
+
+#workspaces button.urgent {
+  color: @red;
 }

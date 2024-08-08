@@ -1,151 +1,120 @@
 {
-  "layer": "top",
-  "position": "top",
-  "height": 34,
-  "spacing": 4,
-  "fixed-center": false,
-  "modules-left": [
-    "custom/arch-logo",
-    "hyprland/workspaces"
-  ],
-  "modules-center": [
-    "hyprland/window"
-  ],
-  "modules-right": [
-    "tray",
-    "cava",
-    "hyprland/language",
-    "custom/weather",
-    "pulseaudio/slider",
-    "battery",
-    "clock"
-  ],
-  "wlr/taskbar": {
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [
-      "foot"
-    ]
-  },
-  "pulseaudio/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal"
-  },
-  "custom/arch-logo": {
-    "format": "󰣇"
-  },
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e-1",
-    "on-scroll-down": "hyprctl dispatch workspace e+1",
-    "format": "{icon}",
-    "all-outputs": true,
-    "format-icons": {
-      "1": "",
-      "2": "󰈹",
-      "4": "",
-      "3": "󰎉",
-      "5": "󰛳",
-      "default": ""
-    },
-    "persistent-workspaces": {
-      "*": 6
-    }
-  },
-  "battery": {
-    "bat": "BAT0",
-    "interval": 60,
-    "states": {
-      "warning": 20,
-      "critical": 15
-    },
-    "format": "{capacity}% {icon} ",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "on-click": "wlogout -c 5 -r 5 -p layer-shell",
-    "max-length": 25
-  },
-  "hyprland/window": {
-    "max-length": 128,
-    "format": "> <span color='#f1fa8c'>{}</span>",
-    "separate-outputs": true
-  },
-  "cava": {
-    "framerate": 120,
-    "interval": 1,
-    "autosens": 1,
-    "bars": 14,
-    "lower_cutoff_freq": 50,
-    "higher_cutoff_freq": 10000,
-    "method": "pulse",
-    "source": "auto",
-    "stereo": true,
-    "reverse": false,
-    "bar_delimiter": 0,
-    "monstercat": false,
-    "waves": false,
-    "noise_reduction": 0.77,
-    "input_delay": 2,
-    "format-icons": [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█"
-    ],
-    "actions": {
-      "on-click-right": "mode"
-    }
-  },
-  "clock": {
-    "format": "{:%H:%M} ",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 3,
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    },
-    "actions": {
-      "on-click-right": "mode",
-      "on-click-forward": "tz_up",
-      "on-click-backward": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
-  },
-  "tray": {
-    "spacing": 4
-  },
-  "custom/weather": {
-    "exec": "~/.config/waybar/wittr.sh",
-    "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "interval": 900
-  },
-  "hyprland/language": {
-    "format": "  {} ",
-    "format-en": "en-US",
-    "format-fa": "fa-IR",
-    "interval": 1,
-    "keyboard-name": "gaming-keyboard",
-    "on-click": "hyprctl switchxkblayout gaming-keyboard next"
-  }
+	"layer": "top", // Waybar at top layer
+	"position": "top", // Waybar position (top|bottom|left|right)
+	// "width": 1280, // Waybar width
+	// Choose the order of the modules
+	"modules-left": [
+		"hyprland/workspaces"
+	],
+	"modules-center": [
+		"custom/music"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"backlight",
+		"battery",
+		"clock",
+		"tray",
+		"hyprland/language",
+		"custom/lock",
+		"custom/power"
+	],
+	"hyprland/workspaces": {
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1",
+		"format": "{icon}",
+		"all-outputs": true,
+		"format-icons": {
+			"1": "",
+			"2": "󰈹",
+			"3": "",
+			"4": "󰎉",
+			"5": "󰛳",
+			"default": ""
+		},
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	},
+	"custom/music": {
+		"format": "  {}",
+		"escape": true,
+		"interval": 5,
+		"tooltip": false,
+		"exec": "playerctl metadata --format='{{ title }}'",
+		"on-click": "playerctl play-pause",
+		"max-length": 50
+	},
+	"clock": {
+		"timezone": "Asia/Tehran",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": " {:%d/%m/%Y}",
+		"format": " {:%H:%M}"
+	},
+	"backlight": {
+		"device": "nvidia_0",
+		"format": "{icon}",
+		"on-click": "((( $(brightnessctl g) == 100 )) && brightnessctl s '0') || (brightnessctl s '+10%')",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}",
+		"format-charging": "󰂄",
+		"format-plugged": "",
+		"format-alt": "{icon}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"pulseaudio": {
+		// "scroll-step": 1, // %, can be a float
+		"format": "{icon} {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"default": [
+				"",
+				"",
+				" "
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	"custom/lock": {
+		"tooltip": false,
+		"on-click": "hyprlock &",
+		"format": "",
+	},
+	"custom/power": {
+		"tooltip": false,
+		"on-click": "wlogout &",
+		"format": "⏻"
+	},
+	"hyprland/language": {
+		"format": " {}",
+		"format-en": "en",
+		"format-fa": "fa",
+		"interval": 1,
+		"keyboard-name": "gaming-keyboard",
+		"on-click": "hyprctl switchxkblayout gaming-keyboard next"
+	}
 }
