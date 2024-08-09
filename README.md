@@ -1,5 +1,5 @@
 # Waybar
-Waybar configuration (using Dracula colors and Hyprland)
+Waybar configuration (using Catppuccin Mocha colors and Hyprland)
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/mhkarimi1383/waybar/main.svg)](https://results.pre-commit.ci/latest/github/mhkarimi1383/waybar/main)
 
