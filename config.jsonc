@@ -1,8 +1,6 @@
 {
-	"layer": "top", // Waybar at top layer
-	"position": "top", // Waybar position (top|bottom|left|right)
-	// "width": 1280, // Waybar width
-	// Choose the order of the modules
+	"layer": "top",
+	"position": "top",
 	"modules-left": [
 		"hyprland/workspaces"
 	],
@@ -32,14 +30,14 @@
 			"4": "󰎉",
 			"5": "󰛳",
 			"default": ""
-		},
+		}
 	},
 	"tray": {
 		"icon-size": 21,
 		"spacing": 10
 	},
 	"custom/music": {
-		"format": "  {}",
+		"format": " {}",
 		"escape": true,
 		"interval": 5,
 		"tooltip": false,
@@ -56,6 +54,8 @@
 	"backlight": {
 		"device": "nvidia_0",
 		"format": "{icon}",
+		"on-scroll-up": "brightnessctl s '+10%'",
+		"on-scroll-down": "brightnessctl s '10%-'",
 		"on-click": "((( $(brightnessctl g) == 100 )) && brightnessctl s '0') || (brightnessctl s '+10%')",
 		"format-icons": [
 			"",
@@ -102,7 +102,7 @@
 	"custom/lock": {
 		"tooltip": false,
 		"on-click": "hyprlock &",
-		"format": "",
+		"format": ""
 	},
 	"custom/power": {
 		"tooltip": false,
