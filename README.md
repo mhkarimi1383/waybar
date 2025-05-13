@@ -12,7 +12,7 @@ Waybar configuration (using Catppuccin Mocha colors and Hyprland)
 Run the command below and (re-)launch waybar
 
 ```bash
-git clone https://github.com/mhkarimi1383/waybar ~/.config/waybar
+git clone https://github.com/mhkarimi1383/waybar ~/.config/waybar --recursive
 ```
 
 **NOTE**: change wittr.sh file and replace Qom with your citty
