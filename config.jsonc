@@ -8,6 +8,7 @@
 		"custom/music"
 	],
 	"modules-right": [
+		"cava",
 		"pulseaudio",
 		"backlight",
 		"battery",
@@ -44,6 +45,25 @@
 		"exec": "playerctl metadata --format='{{ title }}'",
 		"on-click": "playerctl play-pause",
 		"max-length": 50
+	},
+	"cava": {
+		"cava_config": "$HOME/.config/cava/config",
+		"framerate": 60,
+		"bars": 14,
+		"bar_delimiter": 0,
+		"format-icons": [
+			"▁",
+			"▂",
+			"▃",
+			"▄",
+			"▅",
+			"▆",
+			"▇",
+			"█"
+		],
+		"actions": {
+			"on-click-right": "mode"
+		}
 	},
 	"clock": {
 		"timezone": "Asia/Tehran",

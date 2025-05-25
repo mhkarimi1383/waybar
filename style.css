@@ -42,6 +42,7 @@
 #pulseaudio,
 #custom-lock,
 #language,
+#cava,
 #custom-power {
   background-color: @surface0;
   padding: 0.5rem 1rem;
@@ -77,8 +78,16 @@
 
 #pulseaudio {
   color: @maroon;
+  margin-left: 0;
+  padding-left: 5px;
+}
+
+#cava {
+  color: @pink;
   border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 #custom-music {
