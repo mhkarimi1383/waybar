@@ -5,14 +5,13 @@
 		"hyprland/workspaces"
 	],
 	"modules-center": [
-		"custom/music"
+		"clock"
 	],
 	"modules-right": [
-		"cava",
 		"pulseaudio",
+		// "cava",
 		"backlight",
 		"battery",
-		"clock",
 		"tray",
 		"hyprland/language",
 		"custom/lock",
@@ -34,7 +33,7 @@
 		}
 	},
 	"tray": {
-		"icon-size": 21,
+		"icon-size": 16,
 		"spacing": 10
 	},
 	"custom/music": {

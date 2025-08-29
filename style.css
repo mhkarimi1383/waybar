@@ -2,36 +2,44 @@
 
 * {
   font-family: "Maple Mono NF";
-  font-size: 17px;
+  font-size: 10px;
   min-height: 0;
+  padding-right: 2px;
+  padding-left: 2px;
+  padding-bottom: 0px;
 }
 
 #waybar {
   background: transparent;
   color: @text;
-  margin: 5px 5px;
+  margin: 2px 2px;
 }
 
 #workspaces {
-  border-radius: 1rem;
+  border-radius: 5px;
   margin: 5px;
   background-color: @surface0;
-  margin-left: 1rem;
+  margin-left: 2px;
 }
 
 #workspaces button {
   color: @lavender;
-  border-radius: 1rem;
+  border-radius: 5px;
+  padding: 0.4rem;
 }
 
 #workspaces button.active {
   color: @sky;
-  border-radius: 1rem;
+  border-radius: 5px;
 }
 
 #workspaces button:hover {
   color: @sapphire;
-  border-radius: 1rem;
+  border-radius: 5px;
+}
+
+button {
+  background: transparent;
 }
 
 #custom-music,
@@ -51,8 +59,7 @@
 
 #clock {
   color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
+  border-radius: 5px;
 }
 
 #battery {
@@ -78,37 +85,30 @@
 
 #pulseaudio {
   color: @maroon;
-  margin-left: 0;
-  padding-left: 5px;
+  border-radius: 5px 0px 0px 5px;
 }
 
 #cava {
   color: @pink;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+  margin-left: 5px;
   margin-right: 0;
   padding-right: 0;
 }
 
 #custom-music {
   color: @mauve;
-  border-radius: 1rem;
+  border-radius: 5px;
 }
 
 #language {
-  border-radius: 1rem 0px 0px 1rem;
   color: @lavender;
 }
 
 #custom-power {
-  margin-right: 1rem;
-  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 2px;
+  border-radius: 0px 5px 5px 0px;
   color: @red;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
 }
 
 #workspaces button.urgent {
