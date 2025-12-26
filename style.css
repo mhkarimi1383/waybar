@@ -3,9 +3,6 @@
 * {
   font-family: "Maple Mono NF";
   font-size: 10px;
-  min-height: 0;
-  padding-bottom: 0px;
-  padding-top: 0px;
 }
 
 #waybar {
@@ -14,14 +11,11 @@
 }
 
 #workspaces {
-  margin: 5px;
   background-color: @surface0;
-  margin-left: 2px;
 }
 
 #workspaces button {
   color: @lavender;
-  padding: 0.4rem;
 }
 
 #workspaces button.active {
@@ -48,7 +42,6 @@ button {
 #custom-power {
   background-color: @surface0;
   padding: 0.5rem 1rem;
-  margin: 5px 0;
 }
 
 #clock {
@@ -79,23 +72,12 @@ button {
   color: @maroon;
 }
 
-#cava {
-  color: @pink;
-  margin-left: 5px;
-  margin-right: 0;
-  padding-right: 0;
-}
-
-#custom-music {
-  color: @mauve;
-}
 
 #language {
   color: @lavender;
 }
 
 #custom-power {
-  margin-right: 2px;
   color: @red;
 }
 
