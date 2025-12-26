@@ -4,19 +4,16 @@
   font-family: "Maple Mono NF";
   font-size: 10px;
   min-height: 0;
-  padding-right: 2px;
-  padding-left: 2px;
   padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 #waybar {
   background: transparent;
   color: @text;
-  margin: 2px 2px;
 }
 
 #workspaces {
-  border-radius: 5px;
   margin: 5px;
   background-color: @surface0;
   margin-left: 2px;
@@ -24,18 +21,15 @@
 
 #workspaces button {
   color: @lavender;
-  border-radius: 5px;
   padding: 0.4rem;
 }
 
 #workspaces button.active {
   color: @sky;
-  border-radius: 5px;
 }
 
 #workspaces button:hover {
   color: @sapphire;
-  border-radius: 5px;
 }
 
 button {
@@ -59,7 +53,6 @@ button {
 
 #clock {
   color: @blue;
-  border-radius: 5px;
 }
 
 #battery {
@@ -80,17 +73,14 @@ button {
 
 #backlight,
 #battery {
-  border-radius: 0;
 }
 
 #pulseaudio {
   color: @maroon;
-  border-radius: 5px 0px 0px 5px;
 }
 
 #cava {
   color: @pink;
-  border-radius: 5px 0px 0px 5px;
   margin-left: 5px;
   margin-right: 0;
   padding-right: 0;
@@ -98,7 +88,6 @@ button {
 
 #custom-music {
   color: @mauve;
-  border-radius: 5px;
 }
 
 #language {
@@ -107,7 +96,6 @@ button {
 
 #custom-power {
   margin-right: 2px;
-  border-radius: 0px 5px 5px 0px;
   color: @red;
 }
 
